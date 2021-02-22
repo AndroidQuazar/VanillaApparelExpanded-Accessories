@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_Backpack</defName>
+    <label>backpack</label>
+    <description>A simple roomy backpack. Greatly increases the carry weight of the wearer.</description>
+    <techLevel>Neolithic</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+		<li>HandTailoringBench</li>
+		<li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+	<costStuffCount>50</costStuffCount>
+    <graphicData>
+      <texPath>Things/Apparel/Backpack/Backpack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>2400</WorkToMake>
+      <Mass>1</Mass>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/Backpack/Backpack</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>VAEA_Utility_Neolithic</li>
+		<li>VAEA_Utility_Industrial</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0.0,-0.1)</offset>
+		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </north>
+        <south>
+          <offset>(0.0,0.20)</offset>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.25)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.4,-0.15)</offset>
+		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
+		  <fat><offset>(-0.10,-0.0)</offset></fat>
+		  <thin><offset>(0.05,-0.0)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.4,-0.15)</offset>
+		  <hulk><offset>(0.15,-0.0)</offset></hulk>
+		  <fat><offset>(0.10,-0.0)</offset></fat>
+		  <thin><offset>(-0.05,-0.0)</offset></thin>
+        </west>
+        <male> <scale>(0.75,0.75)</scale></male>
+        <female><scale>(0.75,0.75)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.9,0.9)</scale></hulk>
+        <fat> <scale>(0.9,0.9)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
+
+</Defs>
