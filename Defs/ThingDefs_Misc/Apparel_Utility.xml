@@ -221,6 +221,10 @@
       <li>ApparelUtility</li>
     </thingCategories>
     <generateAllowChance>0.15</generateAllowChance>
+	<equippedStatOffsets>
+		<MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
+		<MedicalTendQuality>0.15</MedicalTendQuality>
+	</equippedStatOffsets>
     <apparel>
 	  <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
