@@ -190,6 +190,7 @@
     <description>A bag with everything needed to provide medical treatment.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
+	  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
 	  <researchPrerequisite>MedicineProduction</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
@@ -347,6 +348,7 @@
     <description>A simple tool belt with everything needed to nail a couple of planks or fix electrical appliances.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
 	  <researchPrerequisite>Machining</researchPrerequisite>
       <useIngredientsForColor>false</useIngredientsForColor>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -421,6 +423,95 @@
         <thin><scale>(0.7,0.7)</scale></thin>
         <hulk><scale>(0.75,0.75)</scale></hulk>
         <fat> <scale>(0.75,0.75)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_AmmoPack</defName>
+    <label>ammo pack</label>
+    <description>Bandolier with ammunition.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+	  <researchPrerequisite>Machining</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <statOffsets>
+        <AimingDelayFactor>-0.25</AimingDelayFactor>
+    </statOffsets>
+    <graphicData>
+      <texPath>Things/Apparel/AmmoPack/AmmoPack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/AmmoPack/AmmoPack</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+		<li>VAEA_Utility_Industrial</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0.0,-0.1)</offset>
+		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </north>
+        <south>
+          <offset>(0.0,0.20)</offset>
+		  <female><offset>(0.0,-0.2)</offset> </female>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.25)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.4,-0.15)</offset>
+		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
+		  <fat><offset>(-0.10,-0.0)</offset></fat>
+		  <thin><offset>(0.05,-0.0)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.4,-0.15)</offset>
+		  <hulk><offset>(0.15,-0.0)</offset></hulk>
+		  <fat><offset>(0.10,-0.0)</offset></fat>
+		  <thin><offset>(-0.05,-0.0)</offset></thin>
+        </west>
+        <male> <scale>(0.75,0.75)</scale></male>
+        <female><scale>(0.75,0.75)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.9,0.9)</scale></hulk>
+        <fat> <scale>(0.9,0.9)</scale></fat>
       </wornGraphicData>
     </apparel>
   </ThingDef>
