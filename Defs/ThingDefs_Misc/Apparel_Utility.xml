@@ -340,5 +340,89 @@
       </wornGraphicData>
     </apparel>
   </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_ToolBelt</defName>
+    <label>tool belt</label>
+    <description>A simple tool belt with everything needed to nail a couple of planks or fix electrical appliances.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+	  <researchPrerequisite>Machining</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Steel>30</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/ToolBelt/ToolBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+	<equippedStatOffsets>
+		<FixBrokenDownBuildingSuccessChance>0.1</FixBrokenDownBuildingSuccessChance>
+		<ConstructionSpeed>0.15</ConstructionSpeed>
+		<ConstructSuccessChance>0.1</ConstructSuccessChance>
+		<SmoothingSpeed>0.1</SmoothingSpeed>
+	</equippedStatOffsets>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/ToolBelt/ToolBelt</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+		<li>VAEA_Utility_Industrial</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.3)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(0.3, -0.25)</offset> </male>
+          <female><offset>(0.3,-0.3)</offset> </female>
+          <thin>  <offset>(0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.5,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.1,-0.1)</offset></hulk>
+		  <thin><offset>(-0.1,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
+        </east>
+        <male> <scale>(0.6,0.6)</scale></male>
+        <female><scale>(0.6,0.6)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.75,0.75)</scale></hulk>
+        <fat> <scale>(0.75,0.75)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
 
 </Defs>
