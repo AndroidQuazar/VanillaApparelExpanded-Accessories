@@ -450,9 +450,9 @@
     <costList>
       <Steel>50</Steel>
     </costList>
-    <statOffsets>
+    <equippedStatOffsets>
         <AimingDelayFactor>-0.25</AimingDelayFactor>
-    </statOffsets>
+    </equippedStatOffsets>
     <graphicData>
       <texPath>Things/Apparel/AmmoPack/AmmoPack</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -512,6 +512,93 @@
         <thin><scale>(0.7,0.7)</scale></thin>
         <hulk><scale>(0.9,0.9)</scale></hulk>
         <fat> <scale>(0.9,0.9)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_ExplosiveBelt</defName>
+    <label>explosive belt</label>
+    <description>A belt with explosives.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+	  <researchPrerequisite>Mortars</researchPrerequisite>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Shell_Incendiary>2</Shell_Incendiary>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/ExplosiveBelt/ExplosiveBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <Mass>2</Mass>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/ExplosiveBelt/ExplosiveBelt</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+		<li>VAEA_Utility_Industrial</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(-0.0, -0.25)</offset> </male>
+          <female><offset>(-0.0,-0.3)</offset> </female>
+          <thin>  <offset>(-0.0,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.0,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.0,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(0.0, -0.25)</offset> </male>
+          <female><offset>(0.0,-0.3)</offset> </female>
+          <thin>  <offset>(0.0,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.0,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.0,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.1,-0.1)</offset></hulk>
+		  <thin><offset>(-0.1,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
+        </east>
+		<west>
+          <offset>(0.05,-0.3)</offset>
+		  <hulk><offset>(0.1,-0.1)</offset></hulk>
+		  <thin><offset>(0.1,-0.0)</offset></thin>
+		  <female><offset>(0.05,-0.0)</offset> </female>
+		</west>
+        <male> <scale>(0.6,0.6)</scale></male>
+        <female><scale>(0.6,0.6)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.75,0.75)</scale></hulk>
+        <fat> <scale>(0.75,0.75)</scale></fat>
       </wornGraphicData>
     </apparel>
   </ThingDef>
