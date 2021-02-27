@@ -770,8 +770,8 @@
         <male> <scale>(0.6,0.6)</scale></male>
         <female><scale>(0.6,0.6)</scale></female>
         <thin><scale>(0.7,0.7)</scale></thin>
-        <hulk><scale>(0.75,0.75)</scale></hulk>
-        <fat> <scale>(0.75,0.75)</scale></fat>
+        <hulk><scale>(0.8,0.8)</scale></hulk>
+        <fat> <scale>(0.9,0.9)</scale></fat>
       </wornGraphicData>
     </apparel>
   </ThingDef>
