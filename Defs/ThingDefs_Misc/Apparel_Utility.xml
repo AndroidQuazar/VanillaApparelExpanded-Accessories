@@ -602,5 +602,178 @@
       </wornGraphicData>
     </apparel>
   </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_RangedShieldBelt</defName>
+    <label>ranged shield belt</label>
+    <description>A projectile-repulsion device. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. It doesn't prevent the wearer from firing out, and shuts down instantly if hit by EMP.</description>
+	<thingClass>ShieldBelt</thingClass>
+    <tickerType>Normal</tickerType>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <researchPrerequisite>ShieldBelt</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>50</Steel>
+      <Plasteel>20</Plasteel>
+    </costList>
+    <graphicData>
+      <texPath>Things/Apparel/RangedShieldBelt/RangedShieldBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <statBases>
+      <Mass>3</Mass>
+      <WorkToMake>14000</WorkToMake>
+      <Flammability>0.4</Flammability>
+      <EnergyShieldRechargeRate>0.13</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>0.9</EnergyShieldEnergyMax>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/RangedShieldBelt/RangedShieldBelt</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+		<li>VAEA_Utility_Industrial</li>
+		<li>VAEA_Utility_Spacer</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0.0,-0.1)</offset>
+		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </north>
+        <south>
+          <offset>(0.0,0.0)</offset>
+		  <female><offset>(0.0,-0.2)</offset> </female>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.25)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.1,-0.3)</offset>
+		  <hulk><offset>(-0.05,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.1,-0.3)</offset>
+		  <hulk><offset>(0.05,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </west>
+        <male> <scale>(0.75,0.75)</scale></male>
+        <female><scale>(0.75,0.75)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(1.0,1.0)</scale></hulk>
+        <fat> <scale>(1.0,1.0)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelBase">
+    <defName>VAEA_Apparel_RessurectorBelt</defName>
+    <label>ressurector belt</label>
+    <description>A belt containing a dose of resurrector serum. Injects the serum immediately after death.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Apparel/ResurrectorBelt/ResurrectorBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1700</MarketValue>
+      <Mass>2</Mass>
+      <Flammability>0.4</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <generateAllowChance>0.15</generateAllowChance>
+	<equippedStatOffsets>
+		<MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
+		<MedicalTendQuality>0.15</MedicalTendQuality>
+	</equippedStatOffsets>
+    <apparel>
+	  <wornGraphicPath>Things/Apparel/ResurrectorBelt/ResurrectorBelt</wornGraphicPath>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+		<li>VAEA_Utility_Ultra</li>
+      </tags>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.3)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(0.3, -0.25)</offset> </male>
+          <female><offset>(0.3,-0.3)</offset> </female>
+          <thin>  <offset>(0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.5,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.05,-0.1)</offset></hulk>
+		  <thin><offset>(-0.05,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
+        </east>
+        <west>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.1,-0.1)</offset></hulk>
+		  <thin><offset>(-0.1,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
+        </west>
+        <male> <scale>(0.6,0.6)</scale></male>
+        <female><scale>(0.6,0.6)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.75,0.75)</scale></hulk>
+        <fat> <scale>(0.75,0.75)</scale></fat>
+      </wornGraphicData>
+    </apparel>
+  </ThingDef>
 
 </Defs>
