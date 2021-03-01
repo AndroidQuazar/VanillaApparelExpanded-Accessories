@@ -808,6 +808,11 @@
       <Mass>2</Mass>
       <Flammability>0.4</Flammability>
       <EquipDelay>2</EquipDelay>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.64</AccuracyShort>
+      <AccuracyMedium>0.41</AccuracyMedium>
+      <AccuracyLong>0.22</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
     </statBases>
     <thingCategories>
       <li>ApparelUtility</li>
@@ -860,29 +865,10 @@
         <fat> <scale>(0.9,0.9)</scale></fat>
       </wornGraphicData>
     </apparel>
-  </ThingDef>
-  
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>VAEA_Gun_ShoulderMountedMiniTurret</defName>
-    <label>mini-turret gun</label>
-    <description>A simple automatic gun made to be mounted on a shoulder.</description>
-    <graphicData>
-      <texPath>Things/Apparel/MiniTurretPack/MiniTurretPack_Gun</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.64</AccuracyShort>
-      <AccuracyMedium>0.41</AccuracyMedium>
-      <AccuracyLong>0.22</AccuracyLong>
-      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
-      <DeteriorationRate>0</DeteriorationRate>
-      <Mass>5</Mass>
-      <Flammability>0</Flammability>
-    </statBases>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
+        <label>Gun</label>
         <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
         <warmupTime>0</warmupTime>
         <range>28.9</range>
@@ -891,9 +877,100 @@
         <soundCast>GunShotA</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-        <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
     </verbs>
+    <comps>
+      <li Class="MVCF.Comps.CompProperties_VerbGiver">
+        <verbProps>
+          <li>
+            <label>Gun</label>
+            <visualLabel>mini-turret gun</visualLabel>
+            <description>A simple automatic gun made to be mounted on a shoulder.</description>   
+            <graphic>
+              <texPath>Things/Apparel/MiniTurretPack/MiniTurretPack_Gun</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+            </graphic>
+            <draw>true</draw>
+            <canFireIndependently>true</canFireIndependently>
+            <canBeToggled>true</canBeToggled>
+            <humanAsDefault>true</humanAsDefault>
+            <specificPositions>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Hulk</BodyType>
+                <Default>(0,0)</Default>
+                <Up>(0.0,-0.2)</Up>
+                <Down>(0.0,0.20)</Down>
+                <Right>(-0.55,-0.1)</Right>
+                <Left>(0.55,-0.1)</Left>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Fat</BodyType>
+                <Default>(0,0)</Default>
+                <Up>(0.0,-0.1)</Up>
+                <Down>(0.0,0.20)</Down>
+                <Right>(-0.5,-0.1)</Right>
+                <Left>(0.5,-0.1)</Left>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Male</BodyType>
+                <Default>(0,0)</Default>
+                <Up>(0.0,-0.1)</Up>
+                <Down>(0.0,0.2)</Down>
+                <Right>(-0.4,-0.1)</Right>
+                <Left>(0.4,-0.1)</Left>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Female</BodyType>
+                <Default>(0,0)</Default>
+                <Up>(0.0,-0.1)</Up>
+                <Down>(0.0,0.0)</Down>
+                <Right>(-0.4,-0.1)</Right>
+                <Left>(0.4,-0.1)</Left>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Thin</BodyType>
+                <Default>(0,0)</Default>
+                <Up>(0.0,-0.1)</Up>
+                <Down>(0.0,-0.5)</Down>
+                <Right>(-0.4,-0.1)</Right>
+                <Left>(0.4,-0.1)</Left>
+              </li>
+            </specificPositions>
+            <scalings>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Thin</BodyType>
+                <scaling>0.7</scaling>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Male</BodyType>
+                <scaling>0.75</scaling>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Female</BodyType>
+                <scaling>0.75</scaling>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Fat</BodyType>
+                <scaling>0.9</scaling>
+              </li>
+              <li>
+                <defName>Human</defName>
+                <BodyType>Hulk</BodyType>
+                <scaling>0.9</scaling>
+              </li>
+            </scalings>
+          </li>
+        </verbProps>
+      </li>
+    </comps>
   </ThingDef>
-
 </Defs>
