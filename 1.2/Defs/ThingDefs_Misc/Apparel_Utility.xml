@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ApparelBase">
+  <VAE_Accessories.CaravanCapacityApparelDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_Backpack</defName>
     <label>backpack</label>
     <description>A simple roomy backpack. Greatly increases the carry weight of the wearer.</description>
@@ -27,6 +27,7 @@
       <li>Leathery</li>
     </stuffCategories>
 	<costStuffCount>50</costStuffCount>
+	<carryingCapacity>50</carryingCapacity>
     <graphicData>
       <texPath>Things/Apparel/Backpack/Backpack</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -89,7 +90,7 @@
         <fat> <scale>(0.9,0.9)</scale></fat>
       </wornGraphicData>
     </apparel>
-  </ThingDef>
+  </VAE_Accessories.CaravanCapacityApparelDef>
   
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_BattleBanner</defName>
@@ -284,6 +285,9 @@
       <Flammability>0.4</Flammability>
       <EquipDelay>1</EquipDelay>
     </statBases>
+	<equippedStatOffsets>
+		<RangedWeapon_Cooldown>-2.5</RangedWeapon_Cooldown>
+	</equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
     </thingCategories>
@@ -340,6 +344,15 @@
         <fat> <scale>(0.75,0.75)</scale></fat>
       </wornGraphicData>
     </apparel>
+	
+	<modExtensions>
+		<li Class="VAE_Accessories.EquipmentOffsetConditions">
+			<techLevels>
+				<li>Neolithic</li>
+				<li>Medieval</li>
+			</techLevels>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="ApparelBase">
@@ -451,7 +464,7 @@
       <Steel>50</Steel>
     </costList>
     <equippedStatOffsets>
-        <AimingDelayFactor>-0.25</AimingDelayFactor>
+        <RangedWeapon_Cooldown>-0.25</RangedWeapon_Cooldown>
     </equippedStatOffsets>
     <graphicData>
       <texPath>Things/Apparel/AmmoPack/AmmoPack</texPath>
@@ -601,13 +614,20 @@
         <fat> <scale>(0.75,0.75)</scale></fat>
       </wornGraphicData>
     </apparel>
+	
+	<comps>
+		<li Class="VAE_Accessories.CompProperties_ExplodeOnDeath">
+			<explosionRadius>5</explosionRadius>
+			<damageDef>Bomb</damageDef>
+		</li>
+	</comps>
   </ThingDef>
   
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_RangedShieldBelt</defName>
     <label>ranged shield belt</label>
     <description>A projectile-repulsion device. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. It doesn't prevent the wearer from firing out, and shuts down instantly if hit by EMP.</description>
-	<thingClass>ShieldBelt</thingClass>
+	<thingClass>VAE_Accessories.RangedShieldBelt</thingClass>
     <tickerType>Normal</tickerType>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -703,6 +723,7 @@
     <defName>VAEA_Apparel_RessurectorBelt</defName>
     <label>ressurector belt</label>
     <description>A belt containing a dose of resurrector serum. Injects the serum immediately after death.</description>
+	<thingClass>VAE_Accessories.ResurrectorBelt</thingClass>
     <techLevel>Ultra</techLevel>
     <graphicData>
       <texPath>Things/Apparel/ResurrectorBelt/ResurrectorBelt</texPath>
