@@ -509,16 +509,16 @@
 		  <thin><offset>(-0.0,-0.25)</offset></thin>
         </south>
         <east>
-          <offset>(-0.4,-0.15)</offset>
-		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
-		  <fat><offset>(-0.10,-0.0)</offset></fat>
-		  <thin><offset>(0.05,-0.0)</offset></thin>
+          <offset>(0.0,-0.15)</offset>
+		  <hulk><offset>(0.0,-0.0)</offset></hulk>
+		  <fat><offset>(0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.0)</offset></thin>
         </east>
         <west>
-          <offset>(0.4,-0.15)</offset>
-		  <hulk><offset>(0.15,-0.0)</offset></hulk>
-		  <fat><offset>(0.10,-0.0)</offset></fat>
-		  <thin><offset>(-0.05,-0.0)</offset></thin>
+          <offset>(-0.0,-0.15)</offset>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
         </west>
         <male> <scale>(0.75,0.75)</scale></male>
         <female><scale>(0.75,0.75)</scale></female>
