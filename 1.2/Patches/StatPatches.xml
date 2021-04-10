@@ -1,0 +1,19 @@
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]</xpath>
+            <value>
+                <parts>
+                    <li Class="VAE_Accessories.StatPart_Ammo" />
+                </parts>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/StatDef[defName="RangedWeapon_Cooldown"]/parts</xpath>
+            <value>
+                <li Class="VAE_Accessories.StatPart_Ammo" />
+            </value>
+        </match>
+    </Operation>
+</Patch>
