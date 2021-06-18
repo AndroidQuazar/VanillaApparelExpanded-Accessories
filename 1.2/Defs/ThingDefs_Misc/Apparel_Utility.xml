@@ -819,7 +819,7 @@
       <useIngredientsForColor>false</useIngredientsForColor>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
-      <effectWorking>Smithing</effectWorking>
+      <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
       <researchPrerequisite>GunTurrets</researchPrerequisite>
       <skillRequirements>
