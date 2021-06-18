@@ -127,7 +127,7 @@
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <PainShockThreshold>0.5</PainShockThreshold>
+      <PainShockThreshold>0.25</PainShockThreshold>
     </equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
