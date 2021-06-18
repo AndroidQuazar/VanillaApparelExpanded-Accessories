@@ -695,7 +695,7 @@
       <wornGraphicData>
         <renderUtilityAsPack>true</renderUtilityAsPack>
         <north>
-          <offset>(0.0,-0.1)</offset>
+          <offset>(0.0,-0.32)</offset>
 		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
 		  <fat><offset>(-0.0,-0.0)</offset></fat>
 		  <thin><offset>(0.0,-0.0)</offset></thin>
@@ -721,8 +721,8 @@
         </west>
         <male> <scale>(0.75,0.75)</scale></male>
         <female><scale>(0.75,0.75)</scale></female>
-        <thin><scale>(0.7,0.7)</scale></thin>
-        <hulk><scale>(1.0,1.0)</scale></hulk>
+        <thin><scale>(0.6,0.6)</scale></thin>
+        <hulk><scale>(0.9,0.9)</scale></hulk>
         <fat> <scale>(1.0,1.0)</scale></fat>
       </wornGraphicData>
     </apparel>
