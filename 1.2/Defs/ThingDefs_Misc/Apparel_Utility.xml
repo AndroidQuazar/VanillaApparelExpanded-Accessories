@@ -22,11 +22,9 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-	<costStuffCount>50</costStuffCount>
+    <costList>
+      <Leather_Patch>50</Leather_Patch>
+    </costList>
 	<carryingCapacity>50</carryingCapacity>
     <graphicData>
       <texPath>Things/Apparel/Backpack/Backpack</texPath>
@@ -282,6 +280,7 @@
     </graphicData>
     <statBases>
       <Mass>1</Mass>
+	  <WorkToMake>2400</WorkToMake>
       <Flammability>0.4</Flammability>
       <EquipDelay>1</EquipDelay>
       <VAEA_RangedCooldownFactor>0.5</VAEA_RangedCooldownFactor>
@@ -290,6 +289,26 @@
       <li>ApparelUtility</li>
     </thingCategories>
     <generateAllowChance>0.15</generateAllowChance>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+	  <researchPrerequisite>RecurveBow</researchPrerequisite>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+		<li>HandTailoringBench</li>
+		<li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <apparel>
 	  <wornGraphicPath>Things/Apparel/Quiver/Quiver</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
