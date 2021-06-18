@@ -652,6 +652,7 @@
     <description>A projectile-repulsion device. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. It doesn't prevent the wearer from firing out, and shuts down instantly if hit by EMP.</description>
 	<thingClass>VAE_Accessories.RangedShieldBelt</thingClass>
     <tickerType>Normal</tickerType>
+	<techLevel>Spacer</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
       <researchPrerequisite>ShieldBelt</researchPrerequisite>
