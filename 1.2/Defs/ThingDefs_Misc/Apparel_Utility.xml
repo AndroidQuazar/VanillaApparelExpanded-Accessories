@@ -4,7 +4,7 @@
   <VAE_Accessories.CaravanCapacityApparelDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_Backpack</defName>
     <label>backpack</label>
-    <description>A simple roomy backpack. Greatly increases the carry weight of the wearer.</description>
+    <description>A simple roomy backpack. Greatly increases the carry capacity of the wearer.</description>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
@@ -95,7 +95,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_BattleBanner</defName>
     <label>battle banner</label>
-    <description>A battle banner. Gives the wearer a fighting spirit and confidence.</description>
+    <description>A battle banner. Gives the wearer a fighting spirit and confidence. Increases resistance to pain.</description>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
@@ -188,7 +188,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_MedicBag</defName>
     <label>medic bag</label>
-    <description>A bag with everything needed to provide medical treatment.</description>
+    <description>A bag with everything needed to provide medical treatment. Increases tend quality and surgery success chance.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
 	  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
@@ -274,7 +274,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_Quiver</defName>
     <label>quiver</label>
-    <description>Small quiver for arrows.</description>
+    <description>Small quiver for arrows. Increases firing rate of all neolithic and medieval weapons.</description>
     <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Things/Apparel/Quiver/Quiver</texPath>
@@ -441,7 +441,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_AmmoPack</defName>
     <label>ammo pack</label>
-    <description>Bandolier with ammunition.</description>
+    <description>Bandolier with ammunition. Decreases cooldown of all ranged weapons by 25%.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -541,7 +541,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_ExplosiveBelt</defName>
     <label>explosive belt</label>
-    <description>A belt with explosives.</description>
+    <description>A belt with explosive shells. Will detonate upon user's death.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -819,8 +819,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
-      <effectWorking>Tailor</effectWorking>
+      <effectWorking>Smithing</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
+      <researchPrerequisite>GunTurrets</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
