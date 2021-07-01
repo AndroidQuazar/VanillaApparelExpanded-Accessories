@@ -22,7 +22,7 @@ namespace VAE_Accessories
                 eq.pawn?.apparel == null) return;
             foreach (var apparel in eq.pawn.apparel.WornApparel)
                 if (apparel.def.GetModExtension<EquipmentOffsetConditions>() is EquipmentOffsetConditions conds &&
-                    conds.IsValid(eq.pawn, apparel.def))
+                    conds.IsValid(req.Thing, apparel.def))
                     val *= apparel.GetStatValue(RangedCooldownFactor);
         }
 
