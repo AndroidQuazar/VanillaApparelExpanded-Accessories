@@ -169,11 +169,11 @@ namespace VAE_Accessories
 			impactAngleVect = Vector3Utility.HorizontalVectorFromAngle(dinfo.Angle);
 			Vector3 loc = Wearer.TrueCenter() + impactAngleVect.RotatedBy(180f) * 0.5f;
 			float num = Mathf.Min(10f, 2f + dinfo.Amount / 10f);
-			MoteMaker.MakeStaticMote(loc, Wearer.Map, ThingDefOf.Mote_ExplosionFlash, num);
+			FleckMaker.Static(loc, Wearer.Map, FleckDefOf.ExplosionFlash, num);
 			int num2 = (int)num;
 			for (int i = 0; i < num2; i++)
 			{
-				MoteMaker.ThrowDustPuff(loc, Wearer.Map, Rand.Range(0.8f, MinDrawSize));
+				FleckMaker.ThrowDustPuff(loc, Wearer.Map, Rand.Range(0.8f, MinDrawSize));
 			}
 			lastAbsorbDamageTick = Find.TickManager.TicksGame;
 			KeepDisplaying();
@@ -182,10 +182,10 @@ namespace VAE_Accessories
 		private void Break()
 		{
 			SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(Wearer.Position, Wearer.Map, false));
-			MoteMaker.MakeStaticMote(Wearer.TrueCenter(), Wearer.Map, ThingDefOf.Mote_ExplosionFlash, 12f);
+			FleckMaker.Static(Wearer.TrueCenter(), Wearer.Map, FleckDefOf.ExplosionFlash, 12f);
 			for (int i = 0; i < 6; i++)
 			{
-				MoteMaker.ThrowDustPuff(Wearer.TrueCenter() + Vector3Utility.HorizontalVectorFromAngle(Rand.Range(0, 360)) * Rand.Range(0.3f, 0.6f), Wearer.Map, Rand.Range(0.8f, MinDrawSize));
+				FleckMaker.ThrowDustPuff(Wearer.TrueCenter() + Vector3Utility.HorizontalVectorFromAngle(Rand.Range(0, 360)) * Rand.Range(0.3f, 0.6f), Wearer.Map, Rand.Range(0.8f, MinDrawSize));
 			}
 			energy = 0f;
 			ticksToReset = StartingTicksToReset;
@@ -196,7 +196,7 @@ namespace VAE_Accessories
 			if (Wearer.Spawned)
 			{
 				SoundDefOf.EnergyShield_Reset.PlayOneShot(new TargetInfo(Wearer.Position, Wearer.Map, false));
-				MoteMaker.ThrowLightningGlow(Wearer.TrueCenter(), Wearer.Map, 3f);
+				FleckMaker.ThrowLightningGlow(Wearer.TrueCenter(), Wearer.Map, 3f);
 			}
 			ticksToReset = -1;
 			energy = EnergyOnReset;
@@ -224,6 +224,6 @@ namespace VAE_Accessories
 			}
 		}
 
-		public override bool AllowVerbCast(IntVec3 root, Map map, LocalTargetInfo targ, Verb verb) => true;
+		public override bool AllowVerbCast(Verb verb) => true;
     }
 }

@@ -23,7 +23,7 @@ namespace VAE_Accessories
 			}
 			for (int i = 0; i < 10; i++)
 			{
-				MoteMaker.ThrowAirPuffUp(pawn.DrawPos, pawn.Map);
+				FleckMaker.ThrowAirPuffUp(pawn.DrawPos, pawn.Map);
 			}
 			if (pawn.Faction != null && pawn.Faction != Faction.OfPlayer && pawn.HostileTo(Faction.OfPlayer))
 			{

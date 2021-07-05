@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Vanilla Apparel Expanded — Accessories</name>
-	<author>Oskar Potocki, xrushha</author>
-	<supportedVersions><li>1.2</li></supportedVersions>
+	<author>Oskar Potocki, xrushha, SmashPhil</author>
+	<supportedVersions>
+		<li>1.2</li>
+		<li>1.3</li>
+	</supportedVersions>
 	<packageId>VanillaExpanded.VAEAccessories</packageId>
-	<description>poo poo
-	</description>
+	<description>Equip various utility items.</description>
    <modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -19,7 +21,5 @@
 			<displayName>Vanilla Expanded Framework</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1854607105</steamWorkshopUrl>
 		</li>
-
 	</modDependencies>
-	
 </ModMetaData>

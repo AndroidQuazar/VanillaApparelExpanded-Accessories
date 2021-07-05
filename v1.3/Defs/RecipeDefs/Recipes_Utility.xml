@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>VAEA_Make_Quiver</defName>
+    <label>make quiver</label>
+    <description>Make a quiver.</description>
+    <jobString>Making quiver.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+	<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+	<skillRequirements>
+       <Crafting>4</Crafting>
+    </skillRequirements>
+	<researchPrerequisite>RecurveBow</researchPrerequisite>
+	<useIngredientsForColor>false</useIngredientsForColor>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Leathers</li>
+          </categories>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+    <products>
+      <VAEA_Apparel_Quiver>1</VAEA_Apparel_Quiver>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Leathers</li>
+      </categories>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+</Defs>
