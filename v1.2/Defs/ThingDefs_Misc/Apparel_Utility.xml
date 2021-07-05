@@ -4,7 +4,7 @@
   <VAE_Accessories.CaravanCapacityApparelDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_Backpack</defName>
     <label>backpack</label>
-    <description>A simple roomy backpack. Greatly increases the carry weight of the wearer.</description>
+    <description>A simple roomy backpack. Greatly increases the carry capacity of the wearer.</description>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
@@ -22,11 +22,9 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-	<costStuffCount>50</costStuffCount>
+    <costList>
+      <Leather_Patch>50</Leather_Patch>
+    </costList>
 	<carryingCapacity>50</carryingCapacity>
     <graphicData>
       <texPath>Things/Apparel/Backpack/Backpack</texPath>
@@ -95,7 +93,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_BattleBanner</defName>
     <label>battle banner</label>
-    <description>A battle banner. Gives the wearer a fighting spirit and confidence.</description>
+    <description>A battle banner. Gives the wearer a fighting spirit and confidence. Increases resistance to pain.</description>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
@@ -129,7 +127,7 @@
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <PainShockThreshold>0.5</PainShockThreshold>
+      <PainShockThreshold>0.25</PainShockThreshold>
     </equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
@@ -188,10 +186,10 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_MedicBag</defName>
     <label>medic bag</label>
-    <description>A bag with everything needed to provide medical treatment.</description>
+    <description>A bag with everything needed to provide medical treatment. Increases tend quality and surgery success chance.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
-	  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+	  <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
 	  <researchPrerequisite>MedicineProduction</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
@@ -274,7 +272,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_Quiver</defName>
     <label>quiver</label>
-    <description>Small quiver for arrows.</description>
+    <description>Small quiver for arrows. Increases firing rate of all neolithic and medieval weapons.</description>
     <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Things/Apparel/Quiver/Quiver</texPath>
@@ -282,16 +280,35 @@
     </graphicData>
     <statBases>
       <Mass>1</Mass>
+	  <WorkToMake>2400</WorkToMake>
       <Flammability>0.4</Flammability>
       <EquipDelay>1</EquipDelay>
+      <VAEA_RangedCooldownFactor>0.5</VAEA_RangedCooldownFactor>
     </statBases>
-	<equippedStatOffsets>
-		<RangedWeapon_Cooldown>-2.5</RangedWeapon_Cooldown>
-	</equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
     </thingCategories>
     <generateAllowChance>0.15</generateAllowChance>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+	  <researchPrerequisite>RecurveBow</researchPrerequisite>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+		<li>HandTailoringBench</li>
+		<li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <apparel>
 	  <wornGraphicPath>Things/Apparel/Quiver/Quiver</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
@@ -443,7 +460,7 @@
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_AmmoPack</defName>
     <label>ammo pack</label>
-    <description>Bandolier with ammunition.</description>
+    <description>Bandolier with ammunition. Decreases cooldown of all ranged weapons by 25%.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -463,9 +480,6 @@
     <costList>
       <Steel>50</Steel>
     </costList>
-    <equippedStatOffsets>
-        <RangedWeapon_Cooldown>-0.25</RangedWeapon_Cooldown>
-    </equippedStatOffsets>
     <graphicData>
       <texPath>Things/Apparel/AmmoPack/AmmoPack</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -475,6 +489,7 @@
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
       <EquipDelay>1.5</EquipDelay>
+      <VAEA_RangedCooldownFactor>0.75</VAEA_RangedCooldownFactor>
     </statBases>
     <thingCategories>
       <li>ApparelUtility</li>
@@ -485,7 +500,7 @@
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
       <bodyPartGroups>
-        <li>Torso</li>
+        <li>Waist</li>
       </bodyPartGroups>
       <layers>
         <li>Belt</li>
@@ -496,43 +511,51 @@
       <wornGraphicData>
         <renderUtilityAsPack>true</renderUtilityAsPack>
         <north>
-          <offset>(0.0,-0.1)</offset>
-		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
-		  <fat><offset>(-0.0,-0.0)</offset></fat>
-		  <thin><offset>(0.0,-0.0)</offset></thin>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.3)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
         </north>
         <south>
-          <offset>(0.0,0.20)</offset>
-		  <female><offset>(0.0,-0.2)</offset> </female>
-		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
-		  <fat><offset>(-0.0,-0.0)</offset></fat>
-		  <thin><offset>(-0.0,-0.25)</offset></thin>
+          <male>  <offset>(0.3, -0.25)</offset> </male>
+          <female><offset>(0.3,-0.3)</offset> </female>
+          <thin>  <offset>(0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.5,-0.25)</offset> </fat>
         </south>
         <east>
-          <offset>(-0.4,-0.15)</offset>
-		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
-		  <fat><offset>(-0.10,-0.0)</offset></fat>
-		  <thin><offset>(0.05,-0.0)</offset></thin>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.1,-0.1)</offset></hulk>
+		  <thin><offset>(-0.1,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
         </east>
-        <west>
-          <offset>(0.4,-0.15)</offset>
-		  <hulk><offset>(0.15,-0.0)</offset></hulk>
-		  <fat><offset>(0.10,-0.0)</offset></fat>
-		  <thin><offset>(-0.05,-0.0)</offset></thin>
-        </west>
-        <male> <scale>(0.75,0.75)</scale></male>
-        <female><scale>(0.75,0.75)</scale></female>
-        <thin><scale>(0.7,0.7)</scale></thin>
-        <hulk><scale>(0.9,0.9)</scale></hulk>
-        <fat> <scale>(0.9,0.9)</scale></fat>
+        <male> <scale>(0.6,0.6)</scale></male>
+        <female><scale>(0.6,0.6)</scale></female>
+        <thin><scale>(0.5,0.5)</scale></thin>
+        <hulk><scale>(0.75,0.75)</scale></hulk>
+        <fat> <scale>(0.75,0.75)</scale></fat>
       </wornGraphicData>
     </apparel>
+    
+	<modExtensions>
+		<li Class="VAE_Accessories.EquipmentOffsetConditions">
+			<techLevels>
+				<li>Neolithic</li>
+				<li>Medieval</li>
+        <li>Industrial</li>
+        <li>Spacer</li>
+        <li>Ultra</li>
+        <li>Archotech</li>
+			</techLevels>
+		</li>
+	</modExtensions>
   </ThingDef>
   
   <ThingDef ParentName="ApparelBase">
     <defName>VAEA_Apparel_ExplosiveBelt</defName>
     <label>explosive belt</label>
-    <description>A belt with explosives.</description>
+    <description>A belt with explosive shells. Will detonate upon user's death.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -629,6 +652,7 @@
     <description>A projectile-repulsion device. It will attempt to stop incoming projectiles or shrapnel, but does nothing against melee attacks or heat. It doesn't prevent the wearer from firing out, and shuts down instantly if hit by EMP.</description>
 	<thingClass>VAE_Accessories.RangedShieldBelt</thingClass>
     <tickerType>Normal</tickerType>
+	<techLevel>Spacer</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
       <researchPrerequisite>ShieldBelt</researchPrerequisite>
@@ -686,7 +710,7 @@
       <wornGraphicData>
         <renderUtilityAsPack>true</renderUtilityAsPack>
         <north>
-          <offset>(0.0,-0.1)</offset>
+          <offset>(0.0,-0.32)</offset>
 		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
 		  <fat><offset>(-0.0,-0.0)</offset></fat>
 		  <thin><offset>(0.0,-0.0)</offset></thin>
@@ -712,8 +736,8 @@
         </west>
         <male> <scale>(0.75,0.75)</scale></male>
         <female><scale>(0.75,0.75)</scale></female>
-        <thin><scale>(0.7,0.7)</scale></thin>
-        <hulk><scale>(1.0,1.0)</scale></hulk>
+        <thin><scale>(0.6,0.6)</scale></thin>
+        <hulk><scale>(0.9,0.9)</scale></hulk>
         <fat> <scale>(1.0,1.0)</scale></fat>
       </wornGraphicData>
     </apparel>
@@ -810,8 +834,9 @@
       <useIngredientsForColor>false</useIngredientsForColor>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
-      <effectWorking>Tailor</effectWorking>
+      <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
+      <researchPrerequisite>GunTurrets</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
