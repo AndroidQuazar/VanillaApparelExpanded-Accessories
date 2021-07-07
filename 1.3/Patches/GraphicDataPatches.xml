@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+	
+        <xpath>Defs/ThingDef[defName="Apparel_ShieldBelt"]/apparel</xpath>
+        <value>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0.0,-0.32)</offset>
+		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </north>
+        <south>
+          <offset>(0.0,0.0)</offset>
+		  <female><offset>(0.0,-0.2)</offset> </female>
+		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(-0.0,-0.25)</offset></thin>
+        </south>
+        <east>
+          <offset>(-0.1,-0.3)</offset>
+		  <hulk><offset>(-0.05,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </east>
+        <west>
+          <offset>(0.1,-0.3)</offset>
+		  <hulk><offset>(0.05,-0.1)</offset></hulk>
+		  <fat><offset>(-0.0,-0.0)</offset></fat>
+		  <thin><offset>(0.0,-0.0)</offset></thin>
+        </west>
+        <male> <scale>(0.75,0.75)</scale></male>
+        <female><scale>(0.75,0.75)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(1.0,1.0)</scale></hulk>
+        <fat> <scale>(1.0,1.0)</scale></fat>
+      </wornGraphicData>
+		</value>
+		
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+	
+        <xpath>Defs/ThingDef[defName="Apparel_ShieldBelt"]/apparel</xpath>
+        <value>
+            <wornGraphicPath>Things/Apparel/ShieldBelt/ShieldBelt</wornGraphicPath>
+		</value>
+		
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+	
+        <xpath>Defs/ThingDef[defName="Apparel_SmokepopBelt"]/apparel</xpath>
+        <value>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <male>  <offset>(-0.0, -0.25)</offset> </male>
+          <female><offset>(-0.0,-0.3)</offset> </female>
+          <thin>  <offset>(-0.0,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.0,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.0,-0.25)</offset> </fat>
+        </north>
+        <south>
+          <male>  <offset>(0.0, -0.25)</offset> </male>
+          <female><offset>(0.0,-0.3)</offset> </female>
+          <thin>  <offset>(0.0,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.0,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.0,-0.25)</offset> </fat>
+        </south>
+        <east>
+          <offset>(-0.05,-0.3)</offset>
+		  <hulk><offset>(-0.1,-0.1)</offset></hulk>
+		  <thin><offset>(-0.1,-0.0)</offset></thin>
+		  <female><offset>(-0.05,-0.0)</offset> </female>
+        </east>
+		<west>
+          <offset>(0.05,-0.3)</offset>
+		  <hulk><offset>(0.1,-0.1)</offset></hulk>
+		  <thin><offset>(0.1,-0.0)</offset></thin>
+		  <female><offset>(0.05,-0.0)</offset> </female>
+		</west>
+        <male> <scale>(0.6,0.6)</scale></male>
+        <female><scale>(0.6,0.6)</scale></female>
+        <thin><scale>(0.7,0.7)</scale></thin>
+        <hulk><scale>(0.75,0.75)</scale></hulk>
+        <fat> <scale>(0.75,0.75)</scale></fat>
+      </wornGraphicData>
+		</value>
+		
+    </Operation>
+	
+    <Operation Class="PatchOperationAdd">
+	
+        <xpath>Defs/ThingDef[defName="Apparel_SmokepopBelt"]/apparel</xpath>
+        <value>
+            <wornGraphicPath>Things/Apparel/SmokepopBelt/SmokepopBelt</wornGraphicPath>
+		</value>
+		
+    </Operation>
+
+</Patch>
