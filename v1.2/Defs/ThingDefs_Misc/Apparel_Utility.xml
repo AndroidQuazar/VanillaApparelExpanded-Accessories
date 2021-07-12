@@ -22,9 +22,11 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <costList>
-      <Leather_Patch>50</Leather_Patch>
-    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+	<costStuffCount>50</costStuffCount>
 	<carryingCapacity>50</carryingCapacity>
     <graphicData>
       <texPath>Things/Apparel/Backpack/Backpack</texPath>
