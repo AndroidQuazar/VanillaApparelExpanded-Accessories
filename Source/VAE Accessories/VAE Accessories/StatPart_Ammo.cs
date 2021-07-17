@@ -8,38 +8,36 @@ namespace VAE_Accessories
     [StaticConstructorOnStartup]
     public class StatPart_Ammo : StatPart
     {
-        private static StatDef RangedCooldownFactor;
+        private static StatDef statRangedCooldownFactor;
 
         static StatPart_Ammo()
         {
             LongEventHandler.ExecuteWhenFinished(() =>
-                RangedCooldownFactor = StatDef.Named("VAEA_RangedCooldownFactor"));
+                statRangedCooldownFactor = StatDef.Named("VAEA_RangedCooldownFactor"));
         }
 
         public override void TransformValue(StatRequest req, ref float val)
         {
-            if (!req.HasThing || !(req.Thing.ParentHolder is Pawn_EquipmentTracker eq) ||
-                eq.pawn?.apparel == null) return;
-            foreach (var apparel in eq.pawn.apparel.WornApparel)
-                if (apparel.def.GetModExtension<EquipmentOffsetConditions>() is EquipmentOffsetConditions conds &&
-                    conds.IsValid(req.Thing, apparel.def))
-                    val *= apparel.GetStatValue(RangedCooldownFactor);
+            if (!req.HasThing || !(req.Thing.ParentHolder is Pawn_EquipmentTracker eq)) return;
+            foreach (var thing in eq.AllEquipmentListForReading.Concat(eq.pawn.apparel.WornApparel))
+                if (thing.def.GetModExtension<EquipmentOffsetConditions>() is EquipmentOffsetConditions conds && conds.IsValid(req.Thing, thing.def))
+                    val *= thing.GetStatValue(statRangedCooldownFactor);
         }
 
         public override string ExplanationPart(StatRequest req)
         {
-            if (!req.HasThing || !(req.Thing.ParentHolder is Pawn_EquipmentTracker eq) || eq.pawn?.apparel == null)
+            if (!req.HasThing || !(req.Thing.ParentHolder is Pawn_EquipmentTracker eq))
                 return "";
             var builder = new StringBuilder();
-            foreach (var (apparel, conds) in from apparel in eq.pawn.apparel.WornApparel
+            foreach (var (thing, conds) in from apparel in eq.AllEquipmentListForReading.Concat(eq.pawn.apparel.WornApparel)
                 let conds = apparel.def
                     .GetModExtension<EquipmentOffsetConditions>()
                 where conds != null
                 select (apparel, conds))
                 builder.AppendLine(
-                    conds.IsValid(req.Thing, apparel.def)
-                        ? $"{apparel.def.LabelCap}: {RangedCooldownFactor.Worker.ValueToString(apparel.GetStatValue(RangedCooldownFactor), true, ToStringNumberSense.Factor)}"
-                        : $"{apparel.def.LabelCap}: {req.Thing.def.LabelCap} {"VAEA.IsToo".Translate()} {(req.Thing.def.techLevel > conds.techLevels.Max() ? "VAEA.Advanced".Translate() : "VAEA.Primitive".Translate())}");
+                    conds.IsValid(req.Thing, thing.def)
+                        ? $"{thing.def.LabelCap}: {statRangedCooldownFactor.Worker.ValueToString(thing.GetStatValue(statRangedCooldownFactor), true, ToStringNumberSense.Factor)}"
+                        : $"{thing.def.LabelCap}: {req.Thing.def.LabelCap} {"VAEA.IsToo".Translate()} {(req.Thing.def.techLevel > conds.techLevels.Max() ? "VAEA.Advanced".Translate() : "VAEA.Primitive".Translate())}");
             return builder.ToString();
         }
     }

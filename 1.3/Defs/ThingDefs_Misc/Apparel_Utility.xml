@@ -282,12 +282,11 @@
     </graphicData>
     <statBases>
       <Mass>1</Mass>
+	  <WorkToMake>2400</WorkToMake>
       <Flammability>0.4</Flammability>
       <EquipDelay>1</EquipDelay>
+      <VAEA_RangedCooldownFactor>0.5</VAEA_RangedCooldownFactor>
     </statBases>
-	<equippedStatOffsets>
-		<RangedWeapon_Cooldown>-2.5</RangedWeapon_Cooldown>
-	</equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
     </thingCategories>
@@ -463,9 +462,6 @@
     <costList>
       <Steel>50</Steel>
     </costList>
-    <equippedStatOffsets>
-        <RangedWeapon_Cooldown>-0.25</RangedWeapon_Cooldown>
-    </equippedStatOffsets>
     <graphicData>
       <texPath>Things/Apparel/AmmoPack/AmmoPack</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -475,6 +471,7 @@
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
       <EquipDelay>1.5</EquipDelay>
+      <VAEA_RangedCooldownFactor>0.75</VAEA_RangedCooldownFactor>
     </statBases>
     <thingCategories>
       <li>ApparelUtility</li>
