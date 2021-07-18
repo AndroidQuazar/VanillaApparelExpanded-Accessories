@@ -191,7 +191,7 @@
     <description>A bag with everything needed to provide medical treatment.</description>
     <techLevel>Industrial</techLevel>
     <recipeMaker>
-	  <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+	  <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
 	  <researchPrerequisite>MedicineProduction</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
