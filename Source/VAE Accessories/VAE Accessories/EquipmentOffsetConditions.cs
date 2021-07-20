@@ -12,7 +12,7 @@ namespace VAE_Accessories
         {
             var weaponType = weapon.def.Verbs?.Any(v =>
                 v.verbClass == typeof(Verb_Shoot) || v.verbClass.IsSubclassOf(typeof(Verb_Shoot))) ?? false;
-            var techLevel = techLevels?.Contains(weapon.def.techLevel) ?? false;
+            var techLevel = techLevels?.Contains(weapon.def.techLevel) ?? true;
             return weaponType && techLevel;
         }
     }
