@@ -493,35 +493,36 @@
       <wornGraphicData>
         <renderUtilityAsPack>true</renderUtilityAsPack>
         <north>
-          <offset>(0.0,-0.1)</offset>
-		  <hulk><offset>(-0.0,-0.1)</offset></hulk>
-		  <fat><offset>(-0.0,-0.0)</offset></fat>
-		  <thin><offset>(0.0,-0.0)</offset></thin>
+          <male>  <offset>(-0.3, -0.25)</offset> </male>
+          <female><offset>(-0.3,-0.3)</offset> </female>
+          <thin>  <offset>(-0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(-0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(-0.5,-0.25)</offset> </fat>
         </north>
         <south>
-          <offset>(0.0,0.20)</offset>
-		  <female><offset>(0.0,-0.2)</offset> </female>
-		  <hulk><offset>(-0.0,-0.0)</offset></hulk>
-		  <fat><offset>(-0.0,-0.0)</offset></fat>
-		  <thin><offset>(-0.0,-0.25)</offset></thin>
+          <male>  <offset>(0.3, -0.25)</offset> </male>
+          <female><offset>(0.3,-0.3)</offset> </female>
+          <thin>  <offset>(0.2,-0.25)</offset> </thin>
+          <hulk>  <offset>(0.33,-0.4)</offset> </hulk>
+          <fat>   <offset>(0.5,-0.25)</offset> </fat>
         </south>
         <east>
-          <offset>(-0.4,-0.15)</offset>
+          <offset>(-0.1,-0.25)</offset>
 		  <hulk><offset>(-0.15,-0.0)</offset></hulk>
 		  <fat><offset>(-0.10,-0.0)</offset></fat>
 		  <thin><offset>(0.05,-0.0)</offset></thin>
         </east>
         <west>
-          <offset>(0.4,-0.15)</offset>
+          <offset>(-0.1,-0.15)</offset>
 		  <hulk><offset>(0.15,-0.0)</offset></hulk>
 		  <fat><offset>(0.10,-0.0)</offset></fat>
 		  <thin><offset>(-0.05,-0.0)</offset></thin>
         </west>
-        <male> <scale>(0.75,0.75)</scale></male>
-        <female><scale>(0.75,0.75)</scale></female>
-        <thin><scale>(0.7,0.7)</scale></thin>
-        <hulk><scale>(0.9,0.9)</scale></hulk>
-        <fat> <scale>(0.9,0.9)</scale></fat>
+        <male> <scale>(0.55,0.55)</scale></male>
+        <female><scale>(0.55,0.55)</scale></female>
+        <thin><scale>(0.5,0.5)</scale></thin>
+        <hulk><scale>(0.7,0.7)</scale></hulk>
+        <fat> <scale>(0.7,0.7)</scale></fat>
       </wornGraphicData>
     </apparel>
   </ThingDef>
@@ -740,10 +741,6 @@
       <li>RewardStandardMidFreq</li>
     </thingSetMakerTags>
     <generateAllowChance>0.15</generateAllowChance>
-	<equippedStatOffsets>
-		<MedicalSurgerySuccessChance>0.2</MedicalSurgerySuccessChance>
-		<MedicalTendQuality>0.15</MedicalTendQuality>
-	</equippedStatOffsets>
     <apparel>
 	  <wornGraphicPath>Things/Apparel/ResurrectorBelt/ResurrectorBelt</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
