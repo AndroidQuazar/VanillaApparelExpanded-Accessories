@@ -45,6 +45,7 @@
     <apparel>
 	  <wornGraphicPath>Things/Apparel/Backpack/Backpack</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <careIfDamaged>false</careIfDamaged>
       <bodyPartGroups>
         <li>Torso</li>
@@ -138,6 +139,7 @@
     <apparel>
 	  <wornGraphicPath>Things/Apparel/BattleBanner/BattleBanner</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <careIfDamaged>false</careIfDamaged>
       <bodyPartGroups>
         <li>Torso</li>
@@ -231,6 +233,7 @@
 	  <wornGraphicPath>Things/Apparel/MedicBag/MedicBag</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -295,6 +298,7 @@
 	  <wornGraphicPath>Things/Apparel/Quiver/Quiver</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Torso</li>
       </bodyPartGroups>
@@ -399,6 +403,7 @@
 	  <wornGraphicPath>Things/Apparel/ToolBelt/ToolBelt</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -481,6 +486,7 @@
 	  <wornGraphicPath>Things/Apparel/AmmoPack/AmmoPack</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -568,6 +574,7 @@
 	  <wornGraphicPath>Things/Apparel/ExplosiveBelt/ExplosiveBelt</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -671,6 +678,7 @@
 	  <wornGraphicPath>Things/Apparel/RangedShieldBelt/RangedShieldBelt</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -745,6 +753,7 @@
 	  <wornGraphicPath>Things/Apparel/ResurrectorBelt/ResurrectorBelt</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Waist</li>
       </bodyPartGroups>
@@ -837,6 +846,7 @@
 	  <wornGraphicPath>Things/Apparel/MiniTurretPack/MiniTurretPack</wornGraphicPath>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
         <li>Torso</li>
       </bodyPartGroups>
