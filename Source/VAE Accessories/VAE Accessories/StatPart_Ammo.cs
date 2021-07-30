@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
@@ -20,7 +21,7 @@ namespace VAE_Accessories
         {
             if (!req.HasThing || !(req.Thing.ParentHolder is Pawn_EquipmentTracker eq)) return;
             foreach (var thing in eq.AllEquipmentListForReading.Concat(eq.pawn.apparel.WornApparel))
-                if (thing.def.GetModExtension<EquipmentOffsetConditions>() is EquipmentOffsetConditions conds && conds.IsValid(req.Thing, thing.def))
+                if (!(thing.def.GetModExtension<EquipmentOffsetConditions>() is EquipmentOffsetConditions conds) || conds.IsValid(req.Thing, thing.def))
                     val *= thing.GetStatValue(statRangedCooldownFactor);
         }
 
@@ -32,7 +33,7 @@ namespace VAE_Accessories
             foreach (var (thing, conds) in from apparel in eq.AllEquipmentListForReading.Concat(eq.pawn.apparel.WornApparel)
                 let conds = apparel.def
                     .GetModExtension<EquipmentOffsetConditions>()
-                where conds != null
+                where conds != null || Math.Abs(apparel.GetStatValue(statRangedCooldownFactor) - 1f) > 0.001f
                 select (apparel, conds))
                 builder.AppendLine(
                     conds.IsValid(req.Thing, thing.def)
